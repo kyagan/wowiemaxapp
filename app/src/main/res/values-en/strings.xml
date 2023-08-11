@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wowie Max</string>
+
+
+
+
+
+    <string name="season_Episode">Season 2 Episode 34</string>
+    <string name="popularMovies">Popular Movies</string>
+    <string name="movieprojectProducer">Wowie Max Original</string>
+    <string name="horrorMovies">Horror Movies</string>
+    <string name="thrillerMovies">Thriller Movies</string>
+    <string name="actionMovies">Action Movies</string>
+    <string name="animationMovies">Animation Movies</string>
+    <string name="adventureMovies">Adventure Movies</string>
+    <string name="mysteryMovies">Mystery Movies</string>
+    <string name="dramaMovies">Drama Movies</string>
+    <string name="comedyMovies">Comedy Movies</string>
+    <string name="fantasyMovies">Fantasy Movies</string>
+    <string name="menuMovies">Movies</string>
+    <string name="menuTvShows">TV Shows</string>
+    <string name="menuMostWatchedMovies">Most Watched Movies</string>
+    <string name="menuLastWatched">Last Watched</string>
+    <string name="menuExit">Exit</string>
+</resources>
