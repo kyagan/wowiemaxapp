@@ -1,4 +1,4 @@
-package com.example.movieproject
+package com.kaanyagan.wowiemax.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -19,13 +19,13 @@ class MovieListAdapter(val context: Context, val movies:List<Movie>, val onClick
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MovieListAdapter.MovieViewHolder {
+    ): MovieViewHolder {
         return MovieViewHolder(
             MovieListItemBinding.inflate(LayoutInflater.from(context),parent,false)
         )
     }
 
-    override fun onBindViewHolder(holder: MovieListAdapter.MovieViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
 
         val movie = movies[position]
 

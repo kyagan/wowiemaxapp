@@ -3,6 +3,7 @@ package com.kaanyagan.wowiemax.ui.main
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,12 +13,15 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewpager2.widget.ViewPager2
-import com.example.movieproject.MovieListAdapter
+import com.kaanyagan.wowiemax.ui.adapter.MovieListAdapter
+import com.kaanyagan.wowiemax.R
 import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.state.HeaderSlideMovieState
 import com.kaanyagan.wowiemax.data.entity.state.SlideMovieState
 import com.kaanyagan.wowiemax.data.state.MovieListState
 import com.kaanyagan.wowiemax.databinding.ActivityMainBinding
 import com.kaanyagan.wowiemax.showToast
+import com.kaanyagan.wowiemax.ui.adapter.HeaderSlideMovieAdapter
 import com.kaanyagan.wowiemax.ui.adapter.SlideMovieAdapter
 import com.kaanyagan.wowiemax.ui.login.LoginActivity
 import kotlinx.coroutines.launch
@@ -25,7 +29,6 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-
     private val viewModel: MainViewModel by viewModels()
     private lateinit var sharedPreferences: SharedPreferences
 
@@ -43,13 +46,14 @@ class MainActivity : AppCompatActivity() {
         viewModel.getMoviesByPopularity()
         viewModel.getMoviesByStreamer("Wowie")
         viewModel.getSlideMovie("Wowie")
+        viewModel.getHeaderSlideMovie("Wowie")
         observeMovieListByCategory()
         observeMovieListByPopularity()
         observeMovieListByStreamer()
         observeSlideMovieState()
+        observeHeaderSlideMovieState()
 
         listeners()
-
 
 
     }
@@ -139,7 +143,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         is MovieListState.Success -> {
                             binding.producerProgressBar.isVisible = false
-                            binding.vpMovieStreamer.adapter =
+                            binding.vpSlide.adapter =
                                 MovieListAdapter(this@MainActivity, it.movies) { movie ->
                                     val intent = Intent(this@MainActivity, MainActivity::class.java)
                                     intent.putExtra(MOVIE, movie)
@@ -151,6 +155,35 @@ class MainActivity : AppCompatActivity() {
                         is MovieListState.Error -> {
                             showToast("Unexpected error occurred")
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun observeHeaderSlideMovieState() {
+        lifecycleScope.launch{
+            repeatOnLifecycle(Lifecycle.State.CREATED){
+                viewModel.headerSlideMovieState.collect{
+                    when(it){
+                        is HeaderSlideMovieState.Idle->{}
+                        is HeaderSlideMovieState.Loading->{
+                            binding.headerSlideProgressBar.isVisible = true
+                        }
+                        is HeaderSlideMovieState.IsEmpty->{
+                            binding.headerSlideProgressBar.isVisible = false
+                            binding.twEmptyProducerMovies.isVisible = true
+                        }
+                        is HeaderSlideMovieState.Success->{
+                            binding.headerSlideProgressBar.isVisible = false
+                            binding.vpHeaderSlide.adapter = HeaderSlideMovieAdapter(this@MainActivity, it.movies) { movie ->
+                                    binding.vpHeaderSlide.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+                                    val intent = Intent(this@MainActivity, MainActivity::class.java)
+                                    intent.putExtra(MOVIE, movie)
+                                    startActivity(intent)
+                                }
+                        }
+                        is HeaderSlideMovieState.Error->{}
                     }
                 }
             }
@@ -172,14 +205,14 @@ class MainActivity : AppCompatActivity() {
                         }
                         is SlideMovieState.Success->{
                             binding.producerProgressBar.isVisible = false
-                            binding.vpMovieStreamer.adapter =
+                            binding.vpSlide.adapter =
                                 SlideMovieAdapter(this@MainActivity, it.movies) { movie ->
-                                binding.vpMovieStreamer.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+                                binding.vpSlide.orientation = ViewPager2.ORIENTATION_HORIZONTAL
                                 val intent = Intent(this@MainActivity, MainActivity::class.java)
                                 intent.putExtra(MOVIE, movie)
                                 startActivity(intent)
                             }
-                            binding.indicator.setViewPager(binding.vpMovieStreamer)
+                            binding.indicator.setViewPager(binding.vpSlide)
                         }
                         is SlideMovieState.Error->{}
                     }
@@ -191,14 +224,16 @@ class MainActivity : AppCompatActivity() {
     fun listeners(){
         binding.iwMenu.setOnClickListener {
             if(!binding.linearLayoutMenu.isVisible){
-
                 val menu = binding.linearLayoutMenu
-
                 menu.visibility = View.VISIBLE
+                binding.clHeader.setBackgroundColor(getColor(R.color.transparentColor))
+            }
+            else {
+                binding.linearLayoutMenu.visibility = View.GONE
+                binding.clHeader.setBackgroundResource(R.drawable.gradient_top_to_bottom_bg)
 
             }
-            else
-                binding.linearLayoutMenu.visibility = View.GONE
+
         }
         binding.tvExit.setOnClickListener {
             sharedPreferences = getSharedPreferences(LoginActivity.LOGIN_REMEMBER_ME, Context.MODE_PRIVATE)

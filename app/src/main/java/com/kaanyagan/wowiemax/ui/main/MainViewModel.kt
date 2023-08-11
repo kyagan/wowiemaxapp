@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.kaanyagan.wowiemax.data.Database
 import com.kaanyagan.wowiemax.data.state.MovieListState
 import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.state.HeaderSlideMovieState
 import com.kaanyagan.wowiemax.data.entity.state.SlideMovieState
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,6 +29,10 @@ class MainViewModel : ViewModel() {
     private val _slideMovieState:MutableStateFlow<SlideMovieState> = MutableStateFlow(
         SlideMovieState.Idle)
     val slideMovieState:StateFlow<SlideMovieState> = _slideMovieState
+
+    private val _headerSlideMovieState:MutableStateFlow<HeaderSlideMovieState> = MutableStateFlow(
+        HeaderSlideMovieState.Idle)
+    val headerSlideMovieState:StateFlow<HeaderSlideMovieState> = _headerSlideMovieState
 
 
 
@@ -90,6 +95,22 @@ class MainViewModel : ViewModel() {
                 }
             }.onFailure {
                 _movieListByStreamerState.value = MovieListState.Error(it)
+            }
+        }
+    }
+
+    fun getHeaderSlideMovie(producer:String){
+        viewModelScope.launch {
+            _headerSlideMovieState.value = HeaderSlideMovieState.Loading
+            delay(1000)
+            val movies = Database.movies.filter { it.producer == producer }
+            runCatching {
+                if (!movies.isNullOrEmpty())
+                    _headerSlideMovieState.value = HeaderSlideMovieState.Success(movies)
+                else
+                    _headerSlideMovieState.value = HeaderSlideMovieState.IsEmpty
+            }.onFailure {
+                _headerSlideMovieState.value = HeaderSlideMovieState.Error(it)
             }
         }
     }

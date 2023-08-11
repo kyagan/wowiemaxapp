@@ -8,4 +8,5 @@
 
     <color name="logotheme">#FB8E15</color>
     <color name="mainPageBackground">#1A1A1A</color>
+    <color name="background">#191919</color>
 </resources>
