@@ -18,9 +18,9 @@
     <string name="dramaMovies">Drama Movies</string>
     <string name="comedyMovies">Comedy Movies</string>
     <string name="fantasyMovies">Fantasy Movies</string>
-    <string name="menuMovies">Movies</string>
-    <string name="menuTvShows">TV Shows</string>
-    <string name="menuMostWatchedMovies">Most Watched Movies</string>
-    <string name="menuLastWatched">Last Watched</string>
-    <string name="menuExit">Exit</string>
+    <string name="menuMovies">• Movies</string>
+    <string name="menuTvShows">• TV Shows</string>
+    <string name="menuMostWatchedMovies">• Most Watched Movies</string>
+    <string name="menuLastWatched">• Last Watched</string>
+    <string name="menuExit">• Exit</string>
 </resources>

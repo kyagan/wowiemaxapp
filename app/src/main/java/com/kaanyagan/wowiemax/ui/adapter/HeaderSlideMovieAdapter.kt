@@ -18,7 +18,7 @@ class HeaderSlideMovieAdapter(val context: Context, val movies:List<Movie>, val 
     class MyViewHolder(binding: HeaderSlideListItemBinding): RecyclerView.ViewHolder(binding.root) {
         val ivPoster = binding.ivPoster
         val tvMovieName = binding.tvMovieName
-        val tvDuration = binding.tvDuration
+        val tvMovieDetails = binding.tvMovieDetails
 
 
     }
@@ -38,7 +38,7 @@ class HeaderSlideMovieAdapter(val context: Context, val movies:List<Movie>, val 
         holder.ivPoster.load(movie.image)
         holder.tvMovieName.setText(movie.name)
         val duration = TimeConverter.convertMinutesToTime(movie.duration.toInt())
-        holder.tvDuration.text = "+${movie.ageLimit} • ${movie.categories.joinToString( ", " )} • ${duration} "
+        holder.tvMovieDetails.text = "+${movie.ageLimit} • ${movie.categories.joinToString( ", " )} • ${duration} "
 
         holder.itemView.setOnClickListener{
             onClick(movie)

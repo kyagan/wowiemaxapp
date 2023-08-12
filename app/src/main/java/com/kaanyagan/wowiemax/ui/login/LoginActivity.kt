@@ -9,16 +9,15 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.kaanyagan.wowiemax.R
-import com.kaanyagan.wowiemax.data.Database
 import com.kaanyagan.wowiemax.data.entity.state.LoginMessageState
 import com.kaanyagan.wowiemax.data.entity.state.LoginState
 import com.kaanyagan.wowiemax.databinding.ActivityLoginBinding
+import com.kaanyagan.wowiemax.showAlert
 import com.kaanyagan.wowiemax.ui.main.MainActivity
 import kotlinx.coroutines.launch
 
@@ -51,20 +50,10 @@ class LoginActivity : AppCompatActivity() {
                     when(it){
                         LoginMessageState.Idle ->{}
                         is LoginMessageState.Warning ->{
-                            AlertDialog.Builder(this@LoginActivity)
-                                .setTitle(R.string.warning)
-                                .setIcon(R.drawable.baseline_warning_24)
-                                .setMessage(it.message)
-                                .create()
-                                .show()
+                            showAlert(getString(R.string.warning),getString(it.message),R.drawable.ic_warning)
                         }
                         is LoginMessageState.Error ->{
-                            AlertDialog.Builder(this@LoginActivity)
-                                .setTitle(R.string.error)
-                                .setIcon(R.drawable.baseline_error_24)
-                                .setMessage(it.message)
-                                .create()
-                                .show()
+                            showAlert(getString(R.string.error),getString(it.message),R.drawable.ic_error)
                         }
                     }
                 }
@@ -112,16 +101,18 @@ class LoginActivity : AppCompatActivity() {
         binding.btnSignUp.setOnClickListener {
             viewModel.signUp(binding.etNameSignUp.text.toString(), binding.etEmailSignUp.text.toString(), binding.etPasswordSignUp.text.toString(), binding.etPasswordConfirmSignUp.text.toString())
         }
+
     }
 
     private fun changeSwitchButton(lastSwitch: TextView, nextSwitch: TextView, hiddenLayout: LinearLayout, showLayout: LinearLayout, hiddenButton: Button, showButton: Button){
-        nextSwitch.background = resources.getDrawable(R.drawable.switch_trcks,null)
-        nextSwitch.setTextColor(resources.getColor(R.color.textColor,null))
+        nextSwitch.background = resources.getDrawable(R.drawable.switch_background,null)
+        nextSwitch.setTextColor(resources.getColor(R.color.white,null))
         lastSwitch.background = null
-        lastSwitch.setTextColor(resources.getColor(R.color.pinkColor,null))
+        lastSwitch.setTextColor(resources.getColor(R.color.white,null))
         hiddenLayout.isVisible = false
         showLayout.isVisible = true
         hiddenButton.isVisible = false
         showButton.isVisible = true
     }
+
 }

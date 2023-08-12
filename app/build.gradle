@@ -11,6 +11,7 @@ android {
 
     buildFeatures{
         viewBinding true
+        dataBinding true
     }
     defaultConfig {
         applicationId "com.kaanyagan.wowiemax"
@@ -46,6 +47,8 @@ dependencies {
 
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'me.relex:circleindicator:2.1.6'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'

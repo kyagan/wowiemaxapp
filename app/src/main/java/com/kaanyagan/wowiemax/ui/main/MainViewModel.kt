@@ -5,6 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.kaanyagan.wowiemax.data.Database
 import com.kaanyagan.wowiemax.data.state.MovieListState
 import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.model.Movie
+import com.kaanyagan.wowiemax.data.entity.state.CategoryListState
 import com.kaanyagan.wowiemax.data.entity.state.HeaderSlideMovieState
 import com.kaanyagan.wowiemax.data.entity.state.SlideMovieState
 import kotlinx.coroutines.delay
@@ -34,7 +36,8 @@ class MainViewModel : ViewModel() {
         HeaderSlideMovieState.Idle)
     val headerSlideMovieState:StateFlow<HeaderSlideMovieState> = _headerSlideMovieState
 
-
+    private val _categoryListState:MutableStateFlow<CategoryListState> = MutableStateFlow(CategoryListState.Idle)
+    val categoryListState:StateFlow<CategoryListState> = _categoryListState
 
     fun getMoviesByCategory(category: Categorie){
 
@@ -129,5 +132,25 @@ class MainViewModel : ViewModel() {
                 _slideMovieState.value = SlideMovieState.Error(it)
             }
         }
+    }
+
+    fun getCategories(categories:Array<Categorie>){
+        viewModelScope.launch {
+            runCatching {
+                if(categories.isNullOrEmpty()) _categoryListState.emit(CategoryListState.Empty)
+                else _categoryListState.value = CategoryListState.Result(categories)
+            }.onFailure {
+                _categoryListState.value = CategoryListState.Error(it)
+            }
+        }
+    }
+    fun setMoviesByCategory(category:Categorie):ArrayList<Movie>{
+        var movies:ArrayList<Movie> = arrayListOf()
+        viewModelScope.launch {
+            Database.movies.filter { it.categories.contains(category)}.map {
+                movies.add(it)
+            }
+        }
+        return movies
     }
 }
