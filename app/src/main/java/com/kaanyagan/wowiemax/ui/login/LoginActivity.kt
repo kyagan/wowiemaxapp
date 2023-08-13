@@ -19,6 +19,7 @@ import com.kaanyagan.wowiemax.data.entity.state.LoginState
 import com.kaanyagan.wowiemax.databinding.ActivityLoginBinding
 import com.kaanyagan.wowiemax.showAlert
 import com.kaanyagan.wowiemax.ui.main.MainActivity
+import com.kaanyagan.wowiemax.vibratePhone
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
@@ -51,9 +52,12 @@ class LoginActivity : AppCompatActivity() {
                         LoginMessageState.Idle ->{}
                         is LoginMessageState.Warning ->{
                             showAlert(getString(R.string.warning),getString(it.message),R.drawable.ic_warning)
+                            vibratePhone(this@LoginActivity)
+
                         }
                         is LoginMessageState.Error ->{
                             showAlert(getString(R.string.error),getString(it.message),R.drawable.ic_error)
+                            vibratePhone(this@LoginActivity)
                         }
                     }
                 }

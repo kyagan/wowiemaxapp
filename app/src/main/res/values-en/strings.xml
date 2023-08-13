@@ -2,25 +2,112 @@
 <resources>
     <string name="app_name">Wowie Max</string>
 
+    <!-- login activity-->
+    <string name="log_in">Login</string>
+    <string name="sign_up">Register</string>
+    <string name="user_not_found">User Not Found</string>
+    <string name="user_not_add">Could Not Add User</string>
+    <string name="fill_in_the_blanks">Please Fill In The Blanks</string>
+    <string name="confirm_is_not_equal_password">Passwords Does Not Match</string>
+    <string name="warning">Warning</string>
+    <string name="error">Error</string>
+    <string name="login_name">Name</string>
+    <string name="login_password">Password</string>
+    <string name="login_email">Email</string>
+    <string name="login_confirm">Confirm</string>
+    <string name="cb_remember_me">Remember Me</string>
+    <string name="password_wrong">Password Incorrect. Please Try Again</string>
+    <string name="user_already_exists">User Already Exists</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login_signup_title_top">1000s of movies, Wowie Max exclusives and more</string>
+    <string name="login_signup_title_bottom">are you ready to watch?\n</string>
 
+    <!-- movie categories -->
+    <string name="popular_movies">Popular Movies</string>
+    <string name="wowie_max_original">Wowie Max Original</string>
+    <string name="horror_movies">Horror Movies</string>
+    <string name="thriller_movies">Thriller Movies</string>
+    <string name="action_movies">Action Movies</string>
+    <string name="animation_movies">Animation Movies</string>
+    <string name="adventure_movies">Adventure Movies</string>
+    <string name="mystery_movies">Mystery Movies</string>
+    <string name="drama_movies">Drama Movies</string>
+    <string name="comedy_movies">Comedy Movies</string>
+    <string name="fantasy_movies">Fantasy Movies</string>
 
-
-
-    <string name="season_Episode">Season 2 Episode 34</string>
-    <string name="popularMovies">Popular Movies</string>
-    <string name="movieprojectProducer">Wowie Max Original</string>
-    <string name="horrorMovies">Horror Movies</string>
-    <string name="thrillerMovies">Thriller Movies</string>
-    <string name="actionMovies">Action Movies</string>
-    <string name="animationMovies">Animation Movies</string>
-    <string name="adventureMovies">Adventure Movies</string>
-    <string name="mysteryMovies">Mystery Movies</string>
-    <string name="dramaMovies">Drama Movies</string>
-    <string name="comedyMovies">Comedy Movies</string>
-    <string name="fantasyMovies">Fantasy Movies</string>
+    <!-- menu -->
     <string name="menuMovies">• Movies</string>
     <string name="menuTvShows">• TV Shows</string>
     <string name="menuMostWatchedMovies">• Most Watched Movies</string>
     <string name="menuLastWatched">• Last Watched</string>
     <string name="menuExit">• Exit</string>
+
+    <!-- main activity -->
+    <string name="random_title">Can\'t decide what to watch?</string>
+    <string name="play_something">Play Something</string>
+    <string name="for_you">For You</string>
+    <string name="categories">Categories</string>
+
+    <!-- search activity-->
+    <string name="search_movie">Film Ara</string>
+
+    <!-- movie detail -->
+    <string name="likedPercantage">was liked by</string>
+    <string name="share_message">Watch the movie from Wowie Max now!</string>
+
+    <!-- error or empty messages-->
+    <string name="list_error">An unknown error occurred while creating the list!</string>
+    <string name="empty_list">Empty List</string>
+
+    <!-- movies name and content strings-->
+
+    <string name="spider_man_across_the_spider_verse_name">Spider-Man: Crossing into the Spider-Verse</string>
+    <string name="spider_man_across_the_spider_verse_content">Spider-Man: Into the Spider-Verse is about the adventures of Miles Morales, equipped with special abilities, who stepped into a completely different world after being bitten by a radioactive spider. Reuniting with Gwen Stacy, Miles crosses the Multiverse. Meanwhile, Miles encounters the Spider-Humans, who are responsible for protecting the place no matter what. Faced with a great threat, the heroes don\'t know what to do, and Miles finds himself in front of the other Spiders. Miles must use his abilities to protect the people he loves most from a great threat.</string>
+
+    <string name="the_island_name">Island</string>
+    <string name="the_island_content">When his brother is killed, LAPD officer Mark leaves town to return to the island where he grew up. Seeking answers and revenge, Mark finds himself in a bloody battle with a corrupt rich man who has taken over the island\'s paradise.</string>
+
+    <string name="saw_X_name">Saw 10</string>
+    <string name="saw_X_content">Pursuing a promising cure for his cancer, John Kramer travels to Mexico to undergo an experimental treatment, only to learn that he has been the victim of a scam. Now scammers are falling victim to Jigsaw\'s new game.</string>
+
+    <string name="medusa_deluxe_name">Medusa Deluxe</string>
+    <string name="medusa_deluxe_content">At a competition, talented and ruthless hairdressers learn that one of their own has died before the competition begins. As the contestants roam the neon-lit halls in search of the murderer among them, their long-simmering anger and lies come to light.</string>
+
+    <string name="scream_VI_name">Scream 6</string>
+    <string name="scream_VI_content">In this installment of the series, four survivors of the Ghostface murders leave Woodsboro behind and try to turn a new leaf in New York City.</string>
+
+    <string name="bruce_almighty_name">Oh My God!</string>
+    <string name="bruce_almighty_content">Despite having many fans and a beautiful girlfriend, TV reporter Bruce Nolan believes life isn\'t fair to him. After the worst day of his life, Bruce angrily accuses God of ruining his life and failing to rule the universe well. Then God answers... And donates all his strength to Bruce to see if he can do better...</string>
+
+    <string name="hidden_strike_name">Deadly Collision</string>
+    <string name="hidden_strike_content">Deadly Skirmish focuses on a Chinese private security guard played by Jackie Chan. When a China-based oil refinery in the Middle East is attacked, the security guard is asked to rescue the oil workers. When it is understood that the attackers\' aim is to steal oil, the security guard works with an American ex-marine (John Cena) to stop the attackers.</string>
+
+    <string name="teenage_mutant_ninja_turtles__mutant_mayhem_name">Ninja Turtles: Mutant Mayhem</string>
+    <string name="teenage_mutant_ninja_turtles__mutant_mayhem_content">Teenage Mutant Ninja Turtles: Mutant Mayhem begins when the turtle brothers, who have been protected from the human world for years, act together with the desire to win the hearts of the people of New York by performing heroic acts and to live among them as normal teenagers. As they strive towards that end, their fellow reporter April O\'Neil, who undertakes the task of introducing them to the public, helps them take down a mysterious criminal organization. However, they soon realize that they are trying to do great things when a huge army of mutants is unleashed on them.</string>
+
+    <string name="marry_my_dead_body_name">Marry My Dead Body</string>
+    <string name="marry_my_dead_body_content">Police officer Ming-han\'s life takes a frightening turn when he finds a strange letter. Now married to a ghost, Ming-han must solve a crime case with his wife.</string>
+
+    <string name="jesus_revolution_name">Jesus Movement</string>
+    <string name="jesus_revolution_content">The film is based on the true story of a national spiritual awakening in the early 1970s and the origins of a community of young hippies in Southern California.</string>
+
+    <string name="oppenheimer_name">Oppenheimer</string>
+    <string name="oppenheimer_content">The film tells the story of the American scientist J. Robert Oppenheimer and her role in the development of the atomic bomb.</string>
+
+    <string name="Indiana_Jones_name">Indiana Jones and the Dial of Destiny</string>
+    <string name="indiana_jones_content">Indiana Jones and the Dial of Fate tells the story of the famous archaeologist preparing for retirement, who finds himself in a new adventure. The respected professor of archeology, Dr. Indiana Jones is about to retire after years of teaching at Hunter College in New York. Retiring and living a peaceful life is actually ideal for Jones, as the archaeologist constantly struggles to find his way in a world beyond his mind. But as the claws of an all-too-familiar evil return in the guise of an old rival, Indiana Jones must put on his hat and once again wield his whip to keep an ancient and powerful artifact from falling into the wrong hands.</string>
+
+    <string name="john_wick_name">John Wick</string>
+    <string name="john_wick_content">Mykola adlı eski bir Ukraynalı fizik öğretmeni, 2014 yılında Donbas bölgesinde işgalci askerlerin elinde anlamsız bir trajedi yaşadıktan sonra, barışçıl yaşam tarzından vazgeçer ve intikam arayışına girer. Orduya katıldıktan ve keskin nişancı olarak imrenilen bir yer edindikten sonra gözünü, ortadan kaldırılması çatışmanın gidişatını değiştirebilecek seçkin bir Rus keskin nişancısına diker.</string>
+
+    <string name="Sniper_The_White_Raven_name">Sniper: The White Raven</string>
+    <string name="sniper_content">John Wick is a retired hitman. While enjoying his retirement, his life is turned upside down by the incurable illness of his wife. His most valuable asset and companion dog is his wife. However, three gangsters breaking into his house kill him as well. One of the gangsters is Josef Tasarov, son of mob boss Viggo Tasarov, and a man John had worked with before. Now with nothing to lose, John Wick only wants revenge and gets into a breathtaking chase with his enemies on the streets of New York.</string>
+    <string name="intouchables">Intouchables</string>
+    <string name="intouchables_content">Philippe, a wealthy aristocrat injured after a paragliding accident, hires suburban Driss to help him at home. Driss, on the other hand, has just been released from prison and is not at all suitable for the job. But these two men are somewhat alike. Although they belong to completely different worlds and have different tastes in everything, they form a friendship that is both extraordinary and strong...</string>
+    <string name="the_mask">The Mask</string>
+    <string name="the_mask_content">Stanley Ipkiss (Jim Carrey) is a good-hearted bank teller. One day, he puts on an antique mask he finds and transforms into a creature with incredible powers. Our hero, popularly known as The Mask, accidentally becomes the target of a mafia leader named Dorian Tyrel (Peter Greene).</string>
+    <string name="the_good_the_bad_and_the_ugly">The Good, the Bad and the Ugly</string>
+    <string name="the_good_the_bad_and_the_ugly_content">Tuco (ugly) is an outlaw with a bounty on him. Collaborating with the sniper, a cowboy named Blondie (good), they travel through towns. Handing over Tuco to the law enforcement, Blondie takes the prize and saves Tuco from hanging at the last moment. When things go wrong in a town, their partnership falls apart.</string>
+
+
 </resources>

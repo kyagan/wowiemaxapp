@@ -1,9 +1,13 @@
 package com.kaanyagan.wowiemax
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.ProgressDialog.show
 import android.content.Context
 import android.graphics.Color
+import android.os.Build
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.view.View
@@ -14,10 +18,11 @@ import com.google.android.material.snackbar.Snackbar
 import java.util.Calendar
 
 
-fun Context.showToast(message:String){
+    fun Context.showToast(message:String){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show()
     }
 
+    @SuppressLint("SuspiciousIndentation")
     fun Context.showAlert(title:String, message:String, icon:Int){
         val customTitle = SpannableString(title)
         val customMessage = SpannableString(message)
@@ -33,17 +38,14 @@ fun Context.showToast(message:String){
             dialog.window?.setBackgroundDrawableResource(R.color.background)
             dialog.show()
     }
-    fun Context.showSnackBar(view: View, message:String){
-        Snackbar.make(view,message,Snackbar.LENGTH_LONG).show()
+
+    fun Activity.vibratePhone(context:Context) {
+        val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        if (Build.VERSION.SDK_INT >= 26) {
+            vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(200)
+        }
     }
 
-    fun Context.convertMinutesToTime(minutes: Int): String {
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, minutes / 60)
-        calendar.set(Calendar.MINUTE, minutes % 60)
 
-        val hour = calendar.get(Calendar.HOUR_OF_DAY)
-        val minute = calendar.get(Calendar.MINUTE)
-
-        return "$hour:$minute"
-    }

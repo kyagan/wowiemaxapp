@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">Wowie Max</string>
     <string name="wowie" translatable="false">Wowie</string>
-    <string name="season_Episode">2.Sezon 34.Bölüm</string>
+
+    <!-- login activity-->
     <string name="log_in">Giriş Yap</string>
-    <string name="member_login">ÜYE GİRİŞİ</string>
     <string name="sign_up">Kaydol</string>
     <string name="user_not_found">Kullanıcı Bulunamadı</string>
     <string name="user_not_add">Kullanıcı Eklenemedi</string>
@@ -11,68 +11,104 @@
     <string name="confirm_is_not_equal_password">Şifreler Eşleşmiyor</string>
     <string name="warning">Uyarı</string>
     <string name="error">Hata</string>
-    <string name="spider_man_across_the_spider_verse_name">Örümcek-Adam: Örümcek Evrenine Geçiş</string>
-    <string name="spider_man_across_the_spider_verse_content">Spider-Man: Into the Spider-Verse, radyoaktif bir örümcek tarafından ısırılmasıyla bambaşka bir dünyaya adım atıp, özel yeteneklerle donanan Miles Morales\'in maceralarını konu ediyor. Gwen Stacy ile yeniden bir araya gelen Miles, Çoklu Evrenleri geçer. Miles bu sırada ne olursa olsun orayı korumakla yükümlü olan Örümcek - İnsanlarla karşılaşır. Büyük bir tehdit ile karşı karşıya olan kahramanlar, ne yapacaklarını bilemeyince Miles, kendisini diğer Örümcekler’in karşısında bulur. Miles, en sevdiği insanları büyük bir tehdite karşı koruyabilmek için yeteneklerini kullanmak zorundadır.</string>
-    <string name="the_island_name">Ada</string>
-    <string name="the_island_content">Kardeşi öldürüldüğünde, LAPD memuru Mark, büyüdüğü adaya dönmek için şehri terk eder. Cevaplar ve intikam arayan Mark, kendisini adanın cennetini ele geçiren yozlaşmış bir zenginle kanlı bir savaşın içinde bulur.</string>
-    <string name="saw_X_name">Testere 10</string>
-    <string name="saw_X_content">Kanserini iyileştireceği iddia edilen umut verici bir tedavinin peşinden giden John Kramer deneysel bir tedaviden geçmek için Meksika\'ya gider, ancak bir dolandırıcılığın kurbanı olduğunu öğrenir. Şimdi dolandırıcılar, Jigsaw\'un yeni oyununun kurbanı oluyor.</string>
-    <string name="medusa_deluxe_name">Medusa Deluxe</string>
-    <string name="medusa_deluxe_content">Bir yarışmada yetenekli ve acımasız kuaförler, yarışma başlamadan önce içlerinden birinin öldüğünü öğrenirler. Neon ışıklı salonlarda dolanan yarışmacılar, aralarındaki katili ararken uzun süredir kaynayan kızgınlıkları ve yalanları açığa çıkar.</string>
-    <string name="scream_VI_name">Çığlık 6</string>
-    <string name="scream_VI_content">Serinin bu filminde, Ghostface cinayetlerinden sağ kurtulan dört kişi Woodsboro\'yu geride bırakır ve New York City\'de yeni bir sayfa açmaya çalışır.</string>
-    <string name="bruce_almighty_name">Aman Tanrım!</string>
-    <string name="bruce_almighty_content">Bir çok seveni olmasına ve güzel kız arkadaşına rağmen TV muhabiri Bruce Nolan, hayatın ona karşı adil olmadığına inanmaktadır. Hayatında geçirdiği en kötü günün ardından, Bruce kızgınlıkla Tanrı\'yı hayatını mahvetmekle ve evreni iyi yönetememekle suçlar. Bunun üzerine Tanrı yanıt verir... Ve daha iyisini yapıp yapamayacağını görmek için tüm güçlerini Bruce\'a bağışlar...</string>
-    <string name="hidden_strike_name">Ölümcül Çarpışma</string>
-    <string name="hidden_strike_content">Ölümcül Çarpışma, Jackie Chan’in hayat verdiği Çinli bir özel güvenlikçiye odaklanıyor. Orta Doğu’daki Çin merkezli bir petrol rafinerisi saldırıya uğradığında güvenlikçiden petrol işçilerini oradan kurtarması istenir. Saldırganların amacının petrol çalmak olduğu anlaşıldığında güvenlikçi, Amerikalı eski bir bahriyeliyle (John Cena) iş birliği yaparak saldırganları durdurmaya çalışır.</string>
-    <string name="teenage_mutant_ninja_turtles__mutant_mayhem_name">Ninja Kaplumbağalar: Mutant Kargaşası</string>
-    <string name="teenage_mutant_ninja_turtles__mutant_mayhem_content">Teenage Mutant Ninja Turtles: Mutant Mayhem, yıllarca insanların dünyasından korunan kaplumbağa kardeşlerin, kahramanca davranışlarda bulunarak New York halkının kalbini kazanmak ve onların arasında normal gençler olarak kabul görüp yaşamak isteğiyle birlikte harekete geçmeleriyle başlıyor. Onlar bu amaçta çaba gösterirken, onları halka tanıtma görevini üstlenen muhabir arkadaşları April O\'Neil, gizemli bir suç örgütünü alt etmelerine yardım eder. Ancak çok geçmeden üzerlerine büyük bir mutant ordusu salındığında başlarından büyük işlere kalkıştıklarını görürler.</string>
-    <string name="marry_my_dead_body_name">Ölü Bedenimle Evlen</string>
-    <string name="marry_my_dead_body_content">Tuhaf bir mektup bulan polis memuru Ming-han\'ın hayatı, ürkütücü bir hâl alır. Artık bir hayaletle evli olan Ming-han, eşiyle birlikte bir suç vakasını çözmelidir.</string>
-    <string name="jesus_revolution_name">İsa Hareketi</string>
-    <string name="jesus_revolution_content">Film, 1970\'lerin başlarında ulusal bir ruhani uyanışın gerçek hikayesi ve Güney Kaliforniya\'daki bir genç hippiler topluluğunun kökenlerini temel alıyor.</string>
-    <string name="oppenheimer_name">Oppenheimer</string>
-    <string name="oppenheimer_content">Film Amerikalı bilim adamı J. Robert Oppenheimer\'ın hikayesini ve atom bombasının geliştirilmesindeki rolünü anlatıyor.</string>
-
-    <string name="popularMovies">Popüler Filmler</string>
-    <string name="movieprojectProducer">Wowie Max Orijinal</string>
-    <string name="horrorMovies">Korku Filmleri</string>
-    <string name="thrillerMovies">Gerilim Filmleri</string>
-
-    <string name="actionMovies">Aksiyon Filmleri</string>
-    <string name="animationMovies">Animasyon Filmleri</string>
-    <string name="adventureMovies">Macera Filmleri</string>
-    <string name="mysteryMovies">Gizem Filmleri</string>
-    <string name="dramaMovies">Drama Filmleri</string>
-    <string name="comedyMovies">Komedi Filmleri</string>
-    <string name="fantasyMovies">Fantastik Filmleri</string>
-
     <string name="login_name">İsim</string>
     <string name="login_password">Parola</string>
     <string name="login_email">Email</string>
     <string name="login_confirm">Doğrulama</string>
     <string name="cb_remember_me">Beni Hatırla</string>
-    <string name="password_wrong">Parola bilgisi yanlış, lütfen tekrar deneyiniz</string>
-    <string name="user_already_exists">Kullanıcı zaten var</string>
+    <string name="password_wrong">Şifre bilgisi yanlış, lütfen tekrar deneyiniz.</string>
+    <string name="user_already_exists">Bu email adresi ile bir kullanıcı mevcuttur.</string>
     <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="login_signup_title_top">1000\'lerce film, Wowie Max\'e\ özel yapımlar ve çok daha fazlasını</string>
+    <string name="login_signup_title_bottom">izlemeye hazır mısın?\n</string>
+
+    <!-- movie categories -->
+    <string name="popular_movies">Popüler Filmler</string>
+    <string name="wowie_max_original">Wowie Max Orijinal</string>
+    <string name="horror_movies">Korku Filmleri</string>
+    <string name="thriller_movies">Gerilim Filmleri</string>
+    <string name="action_movies">Aksiyon Filmleri</string>
+    <string name="animation_movies">Animasyon Filmleri</string>
+    <string name="adventure_movies">Macera Filmleri</string>
+    <string name="mystery_movies">Gizem Filmleri</string>
+    <string name="drama_movies">Drama Filmleri</string>
+    <string name="comedy_movies">Komedi Filmleri</string>
+    <string name="fantasy_movies">Fantastik Filmleri</string>
+
+    <!-- menu -->
     <string name="menuMovies">• Filmler</string>
     <string name="menuTvShows">• TV Şovları</string>
     <string name="menuMostWatchedMovies">• En Çok İzlenen Filmler</string>
     <string name="menuLastWatched">• Son İzlenenler</string>
     <string name="menuExit">• Çıkış</string>
-    <string name="movie_details">Film Detay</string>
-    <string name="login_signup_title_top">1000\'lerce film, Wowie Max\'e\ özel yapımlar ve çok daha fazlasını</string>
-    <string name="login_signup_title_bottom">izlemeye hazır mısın?\n</string>
 
-    <string name="list_error">Liste oluşturulurken bilinmeyen bir hata oluştu!</string>
-    <string name="empty_list">Boş liste</string>
-    <string name="likedPercantage">Oranında Beğenildi</string>
-    <string name="share_message"> filmini Wowie Max\'ten hemen izle! </string>
+    <!-- main activity -->
     <string name="random_title">Ne izleyeceğinize\n karar veremediniz mi?</string>
     <string name="play_something">Bir şeyler oynat</string>
     <string name="for_you">Sizin İçin</string>
     <string name="categories">Kategoriler</string>
+
+    <!-- search activity-->
     <string name="search_movie">Film Ara</string>
-    <string name="empty_page_title">Üzgünüz, aradığınız sayfayı bulamadık.</string>
-    <string name="url">https://kaanyagan.com/fragman.mp4</string>
+
+    <!-- error or empty messages-->
+    <string name="list_error">Liste oluşturulurken bilinmeyen bir hata oluştu!</string>
+    <string name="empty_list">Boş liste</string>
+
+    <!-- movie detail -->
+    <string name="likedPercantage">Oranında Beğenildi</string>
+    <string name="share_message"> filmini Wowie Max\'ten hemen izle! </string>
+    <string name="url" translatable="false">https://kaanyagan.com/fragman.mp4</string>
+
+    <!-- movies name and content-->
+    <string name="spider_man_across_the_spider_verse_name">Örümcek-Adam: Örümcek Evrenine Geçiş</string>
+    <string name="spider_man_across_the_spider_verse_content">Spider-Man: Into the Spider-Verse, radyoaktif bir örümcek tarafından ısırılmasıyla bambaşka bir dünyaya adım atıp, özel yeteneklerle donanan Miles Morales\'in maceralarını konu ediyor.\n\nGwen Stacy ile yeniden bir araya gelen Miles, Çoklu Evrenleri geçer. Miles bu sırada ne olursa olsun orayı korumakla yükümlü olan Örümcek - İnsanlarla karşılaşır.\n\nBüyük bir tehdit ile karşı karşıya olan kahramanlar, ne yapacaklarını bilemeyince Miles, kendisini diğer Örümcekler’in karşısında bulur. Miles, en sevdiği insanları büyük bir tehdite karşı koruyabilmek için yeteneklerini kullanmak zorundadır.</string>
+
+    <string name="the_island_name">Ada</string>
+    <string name="the_island_content">Kardeşi öldürüldüğünde, LAPD memuru Mark, büyüdüğü adaya dönmek için şehri terk eder.\n\nCevaplar ve intikam arayan Mark, kendisini adanın cennetini ele geçiren yozlaşmış bir zenginle kanlı bir savaşın içinde bulur.</string>
+
+    <string name="saw_X_name">Testere 10</string>
+    <string name="saw_X_content">Kanserini iyileştireceği iddia edilen umut verici bir tedavinin peşinden giden John Kramer deneysel bir tedaviden geçmek için Meksika\'ya gider, ancak bir dolandırıcılığın kurbanı olduğunu öğrenir.\n\nŞimdi dolandırıcılar, Jigsaw\'un yeni oyununun kurbanı oluyor.</string>
+
+    <string name="medusa_deluxe_name">Medusa Deluxe</string>
+    <string name="medusa_deluxe_content">Bir yarışmada yetenekli ve acımasız kuaförler, yarışma başlamadan önce içlerinden birinin öldüğünü öğrenirler.\n\nNeon ışıklı salonlarda dolanan yarışmacılar, aralarındaki katili ararken uzun süredir kaynayan kızgınlıkları ve yalanları açığa çıkar.</string>
+
+    <string name="scream_VI_name">Çığlık 6</string>
+    <string name="scream_VI_content">Serinin bu filminde, Ghostface cinayetlerinden sağ kurtulan dört kişi Woodsboro\'yu geride bırakır ve New York City\'de yeni bir sayfa açmaya çalışır.</string>
+
+    <string name="bruce_almighty_name">Aman Tanrım!</string>
+    <string name="bruce_almighty_content">Bir çok seveni olmasına ve güzel kız arkadaşına rağmen TV muhabiri Bruce Nolan, hayatın ona karşı adil olmadığına inanmaktadır.\n\nHayatında geçirdiği en kötü günün ardından, Bruce kızgınlıkla Tanrı\'yı hayatını mahvetmekle ve evreni iyi yönetememekle suçlar.\n\nBunun üzerine Tanrı yanıt verir... Ve daha iyisini yapıp yapamayacağını görmek için tüm güçlerini Bruce\'a bağışlar...</string>
+
+    <string name="hidden_strike_name">Ölümcül Çarpışma</string>
+    <string name="hidden_strike_content">Ölümcül Çarpışma, Jackie Chan’in hayat verdiği Çinli bir özel güvenlikçiye odaklanıyor.\n\nOrta Doğu’daki Çin merkezli bir petrol rafinerisi saldırıya uğradığında güvenlikçiden petrol işçilerini oradan kurtarması istenir.\n\nSaldırganların amacının petrol çalmak olduğu anlaşıldığında güvenlikçi, Amerikalı eski bir bahriyeliyle (John Cena) iş birliği yaparak saldırganları durdurmaya çalışır.</string>
+
+    <string name="teenage_mutant_ninja_turtles__mutant_mayhem_name">Ninja Kaplumbağalar: Mutant Kargaşası</string>
+    <string name="teenage_mutant_ninja_turtles__mutant_mayhem_content">Teenage Mutant Ninja Turtles: Mutant Mayhem, yıllarca insanların dünyasından korunan kaplumbağa kardeşlerin, kahramanca davranışlarda bulunarak New York halkının kalbini kazanmak ve onların arasında normal gençler olarak kabul görüp yaşamak isteğiyle birlikte harekete geçmeleriyle başlıyor.\n\nOnlar bu amaçta çaba gösterirken, onları halka tanıtma görevini üstlenen muhabir arkadaşları April O\'Neil, gizemli bir suç örgütünü alt etmelerine yardım eder.\n\nAncak çok geçmeden üzerlerine büyük bir mutant ordusu salındığında başlarından büyük işlere kalkıştıklarını görürler.</string>
+
+    <string name="marry_my_dead_body_name">Ölü Bedenimle Evlen</string>
+    <string name="marry_my_dead_body_content">Tuhaf bir mektup bulan polis memuru Ming-han\'ın hayatı, ürkütücü bir hâl alır.\n\nArtık bir hayaletle evli olan Ming-han, eşiyle birlikte bir suç vakasını çözmelidir.</string>
+
+    <string name="jesus_revolution_name">İsa Hareketi</string>
+    <string name="jesus_revolution_content">Film, 1970\'lerin başlarında ulusal bir ruhani uyanışın gerçek hikayesi ve Güney Kaliforniya\'daki bir genç hippiler topluluğunun kökenlerini temel alıyor.</string>
+
+    <string name="oppenheimer_name">Oppenheimer</string>
+    <string name="oppenheimer_content">Film Amerikalı bilim adamı J. Robert Oppenheimer\'ın hikayesini ve atom bombasının geliştirilmesindeki rolünü anlatıyor.</string>
+
+    <string name="Indiana_Jones_name">Indiana Jones ve Kader Kadranı</string>
+    <string name="indiana_jones_content">Indiana Jones ve Kader Kadranı, emekliliğe hazırlanırlen kendisini yeni bir maceranın içerisinde bulan ünlü arkeoloğun hikayesini konu ediyor.\n\nArkeoloji profesörü olan saygıdeğer Dr. Indiana Jones, New York\'taki Hunter College\'da yıllarca öğretmenlik yaptıktan sonra artık emekli olmak üzeredir.\n\nEmekli olup, huzurlu bir yaşam sürmek aslında Jones için en idealidir çünkü arkeolog, aklını aşan bir dünyada yolunu bulmak için sürekli mücadele etmektedir.\n\nAncak çok tanıdık bir kötülüğün pençeleri eski bir rakibin kılığında geri dönerken Indiana Jones, eski ve güçlü bir eserin yanlış ellere geçmemesi için şapkasını takmalı ve bir kez daha kırbacını eline almalıdır.</string>
+
+    <string name="Sniper_The_White_Raven_name">Sniper: Beyaz Kuzgun</string>
+    <string name="sniper_content">Mykola adlı eski bir Ukraynalı fizik öğretmeni, 2014 yılında Donbas bölgesinde işgalci askerlerin elinde anlamsız bir trajedi yaşadıktan sonra, barışçıl yaşam tarzından vazgeçer ve intikam arayışına girer.\n\nOrduya katıldıktan ve keskin nişancı olarak imrenilen bir yer edindikten sonra gözünü, ortadan kaldırılması çatışmanın gidişatını değiştirebilecek seçkin bir Rus keskin nişancısına diker.</string>
+
+    <string name="john_wick_name">John Wick</string>
+    <string name="john_wick_content">John Wick, emekliye ayrılmış bir tetikçidir. Emekliliğinin tadını çıkarırken karısının yakalandığı amansız hastalıkla hayatı altüst olur.\n\nKarısından kendisine kalan en değerli varlığı ve can yoldaşı köpeğidir.\n\nAncak evine dalan üç gangster onu da öldürür. Gansterlerden biri, mafya babası Viggo Tasarov\'un oğlu Josef Tasarov\'dur ve John\'un daha önce birlikte çalıştığı bir adamdır.\n\nArtık kaybedecek hiçbir şeyi de kalmayan John Wick\'in tek istediği intikamdır ve New York sokaklarında düşmanlarıyla nefes kesen bir kovalamacanın içine girer.</string>
+
+    <string name="intouchables">Can Dostum</string>
+    <string name="intouchables_content">Yamaç paraşütü kazasından sonra sakatlanan zengin bir aristokrat olan Philippe evde kendisine yardımcı olması için banliyöde yaşayan Driss’i işe alır.\n\nDriss ise yeni hapisten çıkmıştır ve bu iş için hiç de uygun değildir. Ama bu iki adam bir şekilde birbirlerine benzemektedir.\n\nTamamen farklı dünyalara ait olmalarına ve her konuda farklı zevklere sahip olmalarına rağmen, hem olağan dışı hem de bir o kadar güçlü bir dostluk kurarlar...</string>
+
+    <string name="the_mask">Maske</string>
+    <string name="the_mask_content">Stanley Ipkiss (Jim Carrey), iyi yürekli bir banka memurudur. Bir gün bulduğu antika bir maskeyi takar ve inanılmaz güçlere sahip bir yaratığa dönüşür.\n\nHalk arasında Maske diye tanınan kahramanımız, yanlışlıkla Dorian Tyrel (Peter Greene) adlı bir mafya liderinin hedefi haline gelir.</string>
+
+    <string name="the_good_the_bad_and_the_ugly">İyi, Kötü ve Çirkin</string>
+    <string name="the_good_the_bad_and_the_ugly_content">Tuco çirkin, üzerine ödül konulmuş bir kanun kaçağıdır.\n\nKeskin nişancı Blondie iyi adlı kovboyla işbirliği yaparak kasabaları dolaşmaktadırlar.\n\nTucoyu  kanun adamlarına teslim eden Blondie, ödülü alıp Tuco\'yu asılmaktan son anda kurtarmaktadır.\n\nBir kasabada işlerin ters gitmesi üzerine ortaklıkları bozulur.</string>
 </resources>

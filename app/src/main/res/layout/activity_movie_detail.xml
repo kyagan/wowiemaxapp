@@ -233,9 +233,10 @@
 
         <ProgressBar
             android:id="@+id/pbActor"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:padding="40dp"
+            android:layout_marginTop="20dp"
             android:visibility="gone"
             android:background="@color/background"
             android:indeterminateTint="@color/logo_theme"/>
@@ -243,7 +244,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvActor"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="120dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -274,6 +275,7 @@
                 android:text="@{context.getString(movie.content)}"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                android:paddingBottom="20dp"
                 />
 
         </ScrollView>
