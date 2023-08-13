@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.model.Category
 import com.kaanyagan.wowiemax.databinding.CategoryListItemBinding
 
-class CategoryAdapter(val context: Context, val categories:Array<Categorie>, val onClick:(category:Categorie)-> Unit):RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
+class CategoryAdapter(val context: Context, val categories:Array<Category>, val onClick:(category:Category)-> Unit):RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
     class MyViewHolder(view:CategoryListItemBinding):ViewHolder(view.root){
         var tvCategoryName = view.tvCategoryName
     }

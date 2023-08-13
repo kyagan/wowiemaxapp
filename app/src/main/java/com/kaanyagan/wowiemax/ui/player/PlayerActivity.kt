@@ -18,7 +18,7 @@ class PlayerActivity : AppCompatActivity() {
 
         exoPlayer = ExoPlayer.Builder(this).build()
         binding.videoPlayer.player = exoPlayer
-        exoPlayer.setMediaItem(MediaItem.fromUri(Uri.parse("https://kaanyagan.com/fragman.mp4")))
+        exoPlayer.setMediaItem(MediaItem.fromUri(Uri.parse(getString(R.string.url))))
         exoPlayer.prepare()
         exoPlayer.play()
     }

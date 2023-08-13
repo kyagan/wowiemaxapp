@@ -40,15 +40,13 @@ class SlideMovieAdapter(val context: Context, val movies:List<Movie>, val onClic
         val ageLimit = movie.ageLimit
         val categories = movie.categories.joinToString( ", " )
 
-        when(movie.numberStar)
-        {
-            1 -> holder.ivStar.setImageResource(R.drawable.star_1)
-            2 -> holder.ivStar.setImageResource(R.drawable.star_2)
-            3 -> holder.ivStar.setImageResource(R.drawable.star_3)
-            4 -> holder.ivStar.setImageResource(R.drawable.star_4)
-            5 -> holder.ivStar.setImageResource(R.drawable.star_5)
-            else -> holder.ivStar.setImageResource(R.drawable.star_1)
-        }
+        if(movie.rateOfLike <20) holder.ivStar.setImageResource(R.drawable.star_1)
+        else if(movie.rateOfLike <40) holder.ivStar.setImageResource(R.drawable.star_2)
+        else if(movie.rateOfLike <60) holder.ivStar.setImageResource(R.drawable.star_3)
+        else if(movie.rateOfLike <80) holder.ivStar.setImageResource(R.drawable.star_4)
+        else if(movie.rateOfLike <=100) holder.ivStar.setImageResource(R.drawable.star_5)
+        else holder.ivStar.setImageResource(R.drawable.star_5)
+
         holder.tvMovieDetails.text = "+${ageLimit} • ${duration} • ${categories}"
 
         holder.itemView.setOnClickListener{

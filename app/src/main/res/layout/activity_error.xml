@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".ui.empty.EmptyActivity">
+    tools:context=".ui.error.ErrorActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/baseline_arrow_back_24"
+            android:src="@drawable/ic_back"
             app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,28 +39,18 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/ivEmpty"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/errorAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="error_anim.json"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llParent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/ic_empty"/>
-
-    <TextView
-        android:id="@+id/tvEmpty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/empty_page_title"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/ivEmpty"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/llParent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,15 +14,11 @@ import com.kaanyagan.wowiemax.databinding.HeaderSlideListItemBinding
 
 class HeaderSlideMovieAdapter(val context: Context, val movies:List<Movie>, val onClick:(movie: Movie)->Unit): RecyclerView.Adapter<HeaderSlideMovieAdapter.MyViewHolder>() {
 
-
     class MyViewHolder(binding: HeaderSlideListItemBinding): RecyclerView.ViewHolder(binding.root) {
         val ivPoster = binding.ivPoster
         val tvMovieName = binding.tvMovieName
         val tvMovieDetails = binding.tvMovieDetails
-
-
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
             HeaderSlideListItemBinding.inflate(LayoutInflater.from(context),parent,false)
@@ -39,7 +35,6 @@ class HeaderSlideMovieAdapter(val context: Context, val movies:List<Movie>, val 
         holder.tvMovieName.setText(movie.name)
         val duration = TimeConverter.convertMinutesToTime(movie.duration.toInt())
         holder.tvMovieDetails.text = "+${movie.ageLimit} • ${movie.categories.joinToString( ", " )} • ${duration} "
-
         holder.itemView.setOnClickListener{
             onClick(movie)
         }

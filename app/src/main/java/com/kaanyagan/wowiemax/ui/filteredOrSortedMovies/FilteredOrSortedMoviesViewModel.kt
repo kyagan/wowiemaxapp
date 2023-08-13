@@ -13,8 +13,6 @@ class FilteredOrSortedMoviesViewModel:ViewModel() {
     private val _specialMovieListState:MutableStateFlow<SpecialMovieListState> = MutableStateFlow(SpecialMovieListState.Idle)
     val specialMovieListState:StateFlow<SpecialMovieListState> = _specialMovieListState
 
-
-
     fun getMovies(movies:ArrayList<Movie>?){
         viewModelScope.launch {
             runCatching {

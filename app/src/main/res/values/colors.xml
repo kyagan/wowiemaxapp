@@ -3,16 +3,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">#ECE5EC</color>
-    <color name="pinkColor">#FF003B</color>
     <color name="transparentColor">#00FFFFFF</color>
 
-    <color name="logotheme">#FB8E15</color>
+    <color name="logo_theme">#FB8E15</color>
     <color name="logo_theme_dark">#E4620A</color>
-    <color name="mainPageBackground">#1A1A1A</color>
     <color name="background">#191919</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fff</color>
-    <color name="login_btn_background_color">#434343</color>
-    <color name="category_list_item_background_color">#E13A3A3A</color>
+    <color name="grey">#434343</color>
 
 </resources>

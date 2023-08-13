@@ -3,12 +3,9 @@ package com.kaanyagan.wowiemax.ui.main
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -17,7 +14,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.kaanyagan.wowiemax.ui.adapter.MovieListAdapter
 import com.kaanyagan.wowiemax.R
 import com.kaanyagan.wowiemax.data.Database
-import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.model.Category
 import com.kaanyagan.wowiemax.data.entity.state.CategoryListState
 import com.kaanyagan.wowiemax.data.entity.state.HeaderSlideMovieState
 import com.kaanyagan.wowiemax.data.entity.state.SlideMovieState
@@ -28,8 +25,8 @@ import com.kaanyagan.wowiemax.ui.adapter.CategoryAdapter
 import com.kaanyagan.wowiemax.ui.adapter.HeaderSlideMovieAdapter
 import com.kaanyagan.wowiemax.ui.adapter.SlideMovieAdapter
 import com.kaanyagan.wowiemax.ui.detail.MovieDetailActivity
-import com.kaanyagan.wowiemax.ui.empty.EmptyActivity
-import com.kaanyagan.wowiemax.ui.filteredOrSortedMovies.FilteredOrSertedMoviesActivity
+import com.kaanyagan.wowiemax.ui.error.ErrorActivity
+import com.kaanyagan.wowiemax.ui.filteredOrSortedMovies.FilteredOrSortedMoviesActivity
 import com.kaanyagan.wowiemax.ui.login.LoginActivity
 import com.kaanyagan.wowiemax.ui.search.SearchActivity
 import kotlinx.coroutines.launch
@@ -52,8 +49,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.getCategories(Categorie.values())
-        viewModel.getMoviesByCategory(Categorie.Korku)
+        viewModel.getCategories(Category.values())
+        viewModel.getMoviesByCategory(Category.Korku)
         viewModel.getMoviesByPopularity()
         viewModel.getMoviesByStreamer(getString(R.string.wowie))
         viewModel.getSlideMovie(getString(R.string.wowie))
@@ -81,16 +78,18 @@ class MainActivity : AppCompatActivity() {
                             binding.rvCategories.isVisible = false
                         }
                         is CategoryListState.Result->{
-                            binding.rvCategories.adapter = CategoryAdapter(this@MainActivity,Categorie.values()){
+                            binding.rvCategories.adapter = CategoryAdapter(this@MainActivity,Category.values()){
                                 val intent = Intent(this@MainActivity,
-                                    FilteredOrSertedMoviesActivity::class.java)
+                                    FilteredOrSortedMoviesActivity::class.java)
                                 val movies = viewModel.setMoviesByCategory(it)
                                 intent.putExtra(MOVIES,movies)
                                 intent.putExtra(MOVIE_LIST_TITLE,"${it.name} Filmleri")
                                 startActivity(intent)
                             }
                         }
-                        is CategoryListState.Error->{}
+                        is CategoryListState.Error->{
+                            showToast(getString(R.string.list_error))
+                        }
                     }
                 }
             }
@@ -256,20 +255,50 @@ class MainActivity : AppCompatActivity() {
 
     fun listeners(){
 
+        binding.tvShowAllHorror.setOnClickListener {
+            val movies = viewModel.setMoviesByCategory(Category.Korku)
+            val intent = Intent(this,FilteredOrSortedMoviesActivity::class.java)
+            intent.putExtra(MOVIES,movies)
+            intent.putExtra(MOVIE_LIST_TITLE,"${Category.Korku} Filmleri")
+            startActivity(intent)
+
+        }
+
+        binding.tvShowAllPopularity.setOnClickListener {
+            val movies = viewModel.setMoviesByPopularity()
+            val intent = Intent(this,FilteredOrSortedMoviesActivity::class.java)
+            intent.putExtra(MOVIES,movies)
+            intent.putExtra(MOVIE_LIST_TITLE,"Popular Movies")
+            startActivity(intent)
+        }
+
+        binding.tvShowAllWowieMax.setOnClickListener {
+            val movies = viewModel.setMoviesByProducer()
+            val intent = Intent(this,FilteredOrSortedMoviesActivity::class.java)
+            intent.putExtra(MOVIES,movies)
+            intent.putExtra(MOVIE_LIST_TITLE,"Wowie Max Original")
+            startActivity(intent)
+        }
+
         binding.iwSearch.setOnClickListener {
             startActivity(
                 Intent(this,SearchActivity::class.java)
             )
         }
+
         binding.iwMenu.setOnClickListener {
+
+
             if(!binding.linearLayoutMenu.isVisible){
                 val menu = binding.linearLayoutMenu
-                menu.visibility = View.VISIBLE
-                menu.animate()
+                menu.animate().apply{translationY(340f).alpha(1f).duration = 500}.start()
+                menu.isVisible = true
                 binding.clHeader.setBackgroundColor(getColor(R.color.transparentColor))
             }
             else {
-                binding.linearLayoutMenu.visibility = View.GONE
+                val menu = binding.linearLayoutMenu
+                menu.animate().apply{translationY(-340f).alpha(0.0f).duration = 1000}.start()
+                menu.isVisible = false
                 binding.clHeader.setBackgroundResource(R.drawable.gradient_top_to_bottom_bg)
             }
         }
@@ -277,22 +306,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvMenuItem1.setOnClickListener {
             startActivity(
-                Intent(this,EmptyActivity::class.java)
+                Intent(this,ErrorActivity::class.java)
             )
         }
         binding.tvMenuItem2.setOnClickListener {
             startActivity(
-                Intent(this,EmptyActivity::class.java)
+                Intent(this,ErrorActivity::class.java)
             )
         }
         binding.tvMenuItem3.setOnClickListener {
             startActivity(
-                Intent(this,EmptyActivity::class.java)
+                Intent(this,ErrorActivity::class.java)
             )
         }
         binding.tvMenuItem4.setOnClickListener {
             startActivity(
-                Intent(this,EmptyActivity::class.java)
+                Intent(this,ErrorActivity::class.java)
             )
         }
 

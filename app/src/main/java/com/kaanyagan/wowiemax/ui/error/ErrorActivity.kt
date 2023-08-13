@@ -1,15 +1,14 @@
-package com.kaanyagan.wowiemax.ui.empty
+package com.kaanyagan.wowiemax.ui.error
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.kaanyagan.wowiemax.R
-import com.kaanyagan.wowiemax.databinding.ActivityEmptyBinding
+import com.kaanyagan.wowiemax.databinding.ActivityErrorBinding
 
-class EmptyActivity : AppCompatActivity() {
-    lateinit var binding: ActivityEmptyBinding
+class ErrorActivity : AppCompatActivity() {
+    lateinit var binding: ActivityErrorBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityEmptyBinding.inflate(layoutInflater)
+        binding = ActivityErrorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.ivBack.setOnClickListener {

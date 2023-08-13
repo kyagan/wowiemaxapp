@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background"
-    android:animateLayoutChanges="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
@@ -27,6 +26,7 @@
             android:background="@color/black"
             android:orientation="vertical"
             android:paddingTop="50dp"
+            android:layout_marginTop="-100dp"
             android:paddingLeft="20dp"
             android:visibility="invisible"
             >
@@ -38,7 +38,7 @@
                 android:text="@string/menuMovies"
                 android:textSize="17sp"
                 android:layout_marginBottom="15dp"
-                android:textColor="@color/logotheme"
+                android:textColor="@color/logo_theme"
                 />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:text="@string/menuTvShows"
                 android:textSize="17sp"
                 android:layout_marginBottom="15dp"
-                android:textColor="@color/logotheme"
+                android:textColor="@color/logo_theme"
                 />
 
             <TextView
@@ -58,7 +58,7 @@
                 android:text="@string/menuMostWatchedMovies"
                 android:textSize="17sp"
                 android:layout_marginBottom="15dp"
-                android:textColor="@color/logotheme"
+                android:textColor="@color/logo_theme"
                 />
             <TextView
                 android:id="@+id/tvMenuItem4"
@@ -67,7 +67,7 @@
                 android:text="@string/menuLastWatched"
                 android:textSize="17sp"
                 android:layout_marginBottom="15dp"
-                android:textColor="@color/logotheme"
+                android:textColor="@color/logo_theme"
                 />
             <TextView
                 android:id="@+id/tvExit"
@@ -76,7 +76,7 @@
                 android:text="@string/menuExit"
                 android:textSize="17sp"
                 android:layout_marginBottom="20dp"
-                android:textColor="@color/logotheme"
+                android:textColor="@color/logo_theme"
                 />
         </LinearLayout>
 
@@ -96,8 +96,8 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:indeterminateTint="@color/logotheme"
-                android:background="@color/mainPageBackground"/>
+                android:indeterminateTint="@color/logo_theme"
+                android:background="@color/background"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clHeaderTop"
@@ -169,7 +169,7 @@
                     android:textColor="@color/white"/>
 
                 <TextView
-                    android:id="@+id/tvShowAll3"
+                    android:id="@+id/tvShowAllHorror"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Show All"
@@ -195,8 +195,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:indeterminateTint="@color/logotheme"
-                    android:background="@color/mainPageBackground"/>
+                    android:indeterminateTint="@color/logo_theme"
+                    android:background="@color/background"/>
                 <TextView
                     android:id="@+id/twEmptyCategoryMovies"
                     android:layout_width="match_parent"
@@ -207,7 +207,7 @@
                     android:textAlignment="center"
                     android:visibility="invisible"
                     android:textSize="30dp"
-                    android:textColor="@color/logotheme"
+                    android:textColor="@color/logo_theme"
                     android:text="@string/empty_list"
                     android:drawableLeft="@drawable/ic_list"/>
             </FrameLayout>
@@ -245,7 +245,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
             <TextView
-                android:id="@+id/tvShowAll2"
+                android:id="@+id/tvShowAllPopularity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Show All"
@@ -271,8 +271,8 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:indeterminateTint="@color/logotheme"
-                    android:background="@color/mainPageBackground"/>
+                    android:indeterminateTint="@color/logo_theme"
+                    android:background="@color/background"/>
                 <TextView
                     android:id="@+id/twEmptyPopularMovies"
                     android:layout_width="match_parent"
@@ -283,7 +283,7 @@
                     android:textAlignment="center"
                     android:visibility="invisible"
                     android:textSize="30dp"
-                    android:textColor="@color/logotheme"
+                    android:textColor="@color/logo_theme"
                     android:text="Empty List"
                     android:drawableLeft="@drawable/ic_list"/>
             </FrameLayout>
@@ -302,7 +302,7 @@
                 android:textColor="@color/white"/>
 
             <TextView
-                android:id="@+id/tvShowAll"
+                android:id="@+id/tvShowAllWowieMax"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Show All"
@@ -321,8 +321,8 @@
                     android:id="@+id/producerProgressBar"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@color/mainPageBackground"
-                    android:indeterminateTint="@color/logotheme"
+                    android:background="@color/background"
+                    android:indeterminateTint="@color/logo_theme"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -345,7 +345,7 @@
                     android:textAlignment="center"
                     android:visibility="invisible"
                     android:textSize="30dp"
-                    android:textColor="@color/logotheme"
+                    android:textColor="@color/logo_theme"
                     android:text="Empty List"
                     android:drawableLeft="@drawable/ic_list"
                     app:layout_constraintEnd_toEndOf="parent"

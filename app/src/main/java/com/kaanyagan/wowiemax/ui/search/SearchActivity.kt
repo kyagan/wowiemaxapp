@@ -1,6 +1,7 @@
 package com.kaanyagan.wowiemax.ui.search
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -16,13 +17,16 @@ import com.kaanyagan.wowiemax.R
 import com.kaanyagan.wowiemax.data.Database
 import com.kaanyagan.wowiemax.data.entity.state.SearchMovieListState
 import com.kaanyagan.wowiemax.databinding.ActivitySearchBinding
-import com.kaanyagan.wowiemax.ui.adapter.SearchMovieListAdapter
+import com.kaanyagan.wowiemax.showAlert
+import com.kaanyagan.wowiemax.ui.adapter.MovieListAdapter
+import com.kaanyagan.wowiemax.ui.detail.MovieDetailActivity
+import com.kaanyagan.wowiemax.ui.main.MainActivity
 import kotlinx.coroutines.launch
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchBinding
     private val viewModel:SearchViewModel by viewModels()
-    lateinit var adapter: SearchMovieListAdapter
+    lateinit var adapter: MovieListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +43,8 @@ class SearchActivity : AppCompatActivity() {
         }
         binding.ivCleanSearch.setOnClickListener{
             binding.etSearch.text.clear()
+            binding.emptyAnimation.isVisible = false
+            binding.rvMovies.isVisible = true
         }
         binding.ivCloseKeyboard.setOnClickListener{
             var imm: InputMethodManager =  getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -53,6 +59,14 @@ class SearchActivity : AppCompatActivity() {
                 if(!s.isNullOrEmpty()){
                     val filteredList = Database.movies.filter {
                         getString(it.name).contains(s.toString(), ignoreCase = true)
+                    }
+                    if (filteredList.isNullOrEmpty()){
+                        binding.emptyAnimation.isVisible = true
+                        binding.rvMovies.isVisible = false
+                    }
+                    else{
+                        binding.emptyAnimation.isVisible = false
+                        binding.rvMovies.isVisible = true
                     }
                     adapter.updateList(filteredList)
                 }else {
@@ -72,6 +86,7 @@ class SearchActivity : AppCompatActivity() {
                 viewModel.searchMovieListState.collect{
                     when(it){
                         SearchMovieListState.Idle->{}
+
                         SearchMovieListState.Loading->{
                             binding.progressBar.isVisible =true
                             binding.rvMovies.isVisible=false
@@ -79,12 +94,15 @@ class SearchActivity : AppCompatActivity() {
                         is SearchMovieListState.Result->{
                             binding.progressBar.isVisible=false
                             binding.rvMovies.isVisible =true
-                            adapter = SearchMovieListAdapter(this@SearchActivity,Database.movies)
+                            adapter = MovieListAdapter(this@SearchActivity,Database.movies){
+                                val intent = Intent(this@SearchActivity,MovieDetailActivity::class.java)
+                                intent.putExtra(MainActivity.MOVIE, it)
+                                startActivity(intent)
+                            }
                             binding.rvMovies.adapter=adapter
                         }
                         is SearchMovieListState.Error->{
                             binding.rvMovies.isVisible=false
-                            AlertDialog.Builder(this@SearchActivity).setTitle("Error").setMessage("liste gelirken sorun oluştu").create().show()
                         }
                     }
                 }

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kaanyagan.wowiemax.data.Database
 import com.kaanyagan.wowiemax.data.state.MovieListState
-import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.model.Category
 import com.kaanyagan.wowiemax.data.entity.model.Movie
 import com.kaanyagan.wowiemax.data.entity.state.CategoryListState
 import com.kaanyagan.wowiemax.data.entity.state.HeaderSlideMovieState
@@ -39,7 +39,7 @@ class MainViewModel : ViewModel() {
     private val _categoryListState:MutableStateFlow<CategoryListState> = MutableStateFlow(CategoryListState.Idle)
     val categoryListState:StateFlow<CategoryListState> = _categoryListState
 
-    fun getMoviesByCategory(category: Categorie){
+    fun getMoviesByCategory(category: Category){
 
         viewModelScope.launch {
             _movieListByCategoryState.value = MovieListState.Loading
@@ -134,7 +134,7 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    fun getCategories(categories:Array<Categorie>){
+    fun getCategories(categories:Array<Category>){
         viewModelScope.launch {
             runCatching {
                 if(categories.isNullOrEmpty()) _categoryListState.emit(CategoryListState.Empty)
@@ -144,11 +144,31 @@ class MainViewModel : ViewModel() {
             }
         }
     }
-    fun setMoviesByCategory(category:Categorie):ArrayList<Movie>{
+    fun setMoviesByCategory(category:Category):ArrayList<Movie>{
         var movies:ArrayList<Movie> = arrayListOf()
         viewModelScope.launch {
             Database.movies.filter { it.categories.contains(category)}.map {
                 movies.add(it)
+            }
+        }
+        return movies
+    }
+
+    fun setMoviesByPopularity(): ArrayList<Movie>{
+        var movies:ArrayList<Movie> = arrayListOf()
+        viewModelScope.launch {
+            if (_movieListByPopularityState.value is MovieListState.Success){
+                movies = (_movieListByPopularityState.value as MovieListState.Success).movies as ArrayList<Movie>
+            }
+        }
+        return movies
+    }
+
+    fun setMoviesByProducer(): ArrayList<Movie>{
+        var movies:ArrayList<Movie> = arrayListOf()
+        viewModelScope.launch {
+            if (_movieListByStreamerState.value is MovieListState.Success){
+                movies = (_movieListByStreamerState.value as MovieListState.Success).movies as ArrayList<Movie>
             }
         }
         return movies

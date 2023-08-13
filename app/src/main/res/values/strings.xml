@@ -74,4 +74,5 @@
     <string name="categories">Kategoriler</string>
     <string name="search_movie">Film Ara</string>
     <string name="empty_page_title">Üzgünüz, aradığınız sayfayı bulamadık.</string>
+    <string name="url">https://kaanyagan.com/fragman.mp4</string>
 </resources>

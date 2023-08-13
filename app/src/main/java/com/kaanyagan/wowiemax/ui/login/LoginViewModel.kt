@@ -58,7 +58,6 @@ class LoginViewModel:ViewModel() {
                         val user = User(
                             Database.users.lastIndex + 1,
                             "$name",
-                            "$name",
                             "$email",
                             "$password"
                         )

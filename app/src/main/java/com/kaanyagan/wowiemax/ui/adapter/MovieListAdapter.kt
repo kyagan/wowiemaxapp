@@ -9,7 +9,7 @@ import com.kaanyagan.wowiemax.databinding.MovieListItemBinding
 import com.kaanyagan.wowiemax.data.entity.model.Movie
 
 
-class MovieListAdapter(val context: Context, val movies:List<Movie>, val onClick:(movie: Movie)->Unit):
+class MovieListAdapter(val context: Context, var movies:List<Movie>, val onClick:(movie: Movie)->Unit):
     RecyclerView.Adapter<MovieListAdapter.MovieViewHolder>() {
 
     class MovieViewHolder(binding: MovieListItemBinding): RecyclerView.ViewHolder(binding.root){
@@ -39,6 +39,10 @@ class MovieListAdapter(val context: Context, val movies:List<Movie>, val onClick
 
     override fun getItemCount(): Int {
         return movies.size
+    }
+
+    fun updateList(filteredList: List<Movie>) {
+        movies = filteredList
     }
 
 

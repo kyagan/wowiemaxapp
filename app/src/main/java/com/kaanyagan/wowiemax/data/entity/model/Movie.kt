@@ -14,10 +14,9 @@ data class Movie(
     val director:String,
     val scriptwriter:String,
     val rateOfLike:Int,
-    val categories:List<Categorie>,
+    val categories:List<Category>,
     val content:Int,
     val ageLimit:Int,
     val isViolence:Boolean = false,
     val isNegativeExample:Boolean = false,
-    var numberStar:Int
     ): Parcelable

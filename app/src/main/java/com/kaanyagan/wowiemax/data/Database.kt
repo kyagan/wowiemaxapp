@@ -3,17 +3,17 @@ package com.kaanyagan.wowiemax.data
 import com.kaanyagan.wowiemax.R
 import com.kaanyagan.wowiemax.data.entity.model.Actor
 import com.kaanyagan.wowiemax.data.entity.model.ActorMovie
-import com.kaanyagan.wowiemax.data.entity.model.Categorie
+import com.kaanyagan.wowiemax.data.entity.model.Category
 import com.kaanyagan.wowiemax.data.entity.model.Movie
 import com.kaanyagan.wowiemax.data.entity.model.User
 
 object Database {
     var users = mutableListOf(
-        User(1,"Elif","Çınar","elif@gmail.com","12345"),
-        User(2,"Kaan","Yagan","kaan@gmail.com","12345"),
-        User(3,"Salih","Ozsoy","salih@gmail.com","12345"),
-        User(4,"Nejat","Baturay","nejat@gmail.com","12345"),
-        User(5,"a","a","a","a"),
+        User(1,"Elif","elif@gmail.com","12345"),
+        User(2,"Kaan","kaan@gmail.com","12345"),
+        User(3,"Salih","salih@gmail.com","12345"),
+        User(4,"Nejat","nejat@gmail.com","12345"),
+        User(5,"a","a","a"),
     )
 
 
@@ -69,34 +69,34 @@ object Database {
 
     val movies = listOf(
         Movie(1,R.string.spider_man_across_the_spider_verse_name,"140","https://www.hdfilmcehennemi.life/uploads/poster/spider-man-across-the-spider-verse.jpg","Marvel","Joaquim Dos Santos","Phil Lord",96, listOf(
-            Categorie.Animasyon,Categorie.Aksiyon,Categorie.Macera),R.string.spider_man_across_the_spider_verse_content, 10, isViolence = true, isNegativeExample = true,1),
+            Category.Animasyon,Category.Aksiyon,Category.Macera),R.string.spider_man_across_the_spider_verse_content, 10, isViolence = true, isNegativeExample = true),
         Movie(2,R.string.the_island_name,"93","https://www.hdfilmcehennemi.life/uploads/poster/the-island.jpg","Wowie","Michael Bay","Caspian Tredwell-Owen",77, listOf(
-            Categorie.Aksiyon,Categorie.Gerilim
-        ),R.string.the_island_content,16, isViolence = true, isNegativeExample = true,2),
-        Movie(3,R.string.saw_X_name,"118","https://www.hdfilmcehennemi.life/uploads/poster/saw-x.jpg","Wowie","Kevin Greutert","Josh Stolberg",70, listOf(
-            Categorie.Korku,Categorie.Gerilim,Categorie.Gizem
-        ),R.string.saw_X_content,18, isViolence = false, isNegativeExample = false,3),
-        Movie(4,R.string.medusa_deluxe_name,"101","https://www.hdfilmcehennemi.life/uploads/poster/medusa-deluxe.jpg","Wowie","Thomas Hardiman","Thomas Hardiman",76, listOf(
-            Categorie.Dram,Categorie.Gizem
-        ),R.string.medusa_deluxe_content,13, isViolence = false, isNegativeExample = true,4),
+            Category.Aksiyon,Category.Gerilim
+        ),R.string.the_island_content,16, isViolence = true, isNegativeExample = true),
+        Movie(3,R.string.saw_X_name,"118","https://www.hdfilmcehennemi.life/uploads/poster/saw-x.jpg","Wowie","Kevin Greutert","Josh Stolberg",90, listOf(
+            Category.Korku,Category.Gerilim,Category.Gizem
+        ),R.string.saw_X_content,18, isViolence = false, isNegativeExample = false),
+        Movie(4,R.string.medusa_deluxe_name,"101","https://www.hdfilmcehennemi.life/uploads/poster/medusa-deluxe.jpg","Wowie","Thomas Hardiman","Thomas Hardiman",65, listOf(
+            Category.Dram,Category.Gizem
+        ),R.string.medusa_deluxe_content,13, isViolence = false, isNegativeExample = true),
         Movie(5,R.string.scream_VI_name,"122","https://www.hdfilmcehennemi.life/uploads/poster/scream-6-2.jpg","Paramount Pictures","Tyler Gillett","James Vanderbilt",76, listOf(
-            Categorie.Korku,Categorie.Gerilim,Categorie.Gizem
-        ),R.string.scream_VI_content,18, isViolence = false, isNegativeExample = false,2),
+            Category.Korku,Category.Gerilim,Category.Gizem
+        ),R.string.scream_VI_content,18, isViolence = false, isNegativeExample = false),
         Movie(6,R.string.bruce_almighty_name,"101","https://www.hdfilmcehennemi.life/uploads/poster/aman-tanrim-1-izle.jpg","Spyglass Media Group","Tom Shadyac","Steve Koren",88, listOf(
-            Categorie.Komedi,Categorie.Fantastik
-        ),R.string.bruce_almighty_content,16, isViolence = true, isNegativeExample = true,5),
+            Category.Komedi,Category.Fantastik
+        ),R.string.bruce_almighty_content,16, isViolence = true, isNegativeExample = true),
         Movie(7,R.string.hidden_strike_name,"103","https://www.hdfilmcehennemi.life/uploads/poster/hidden-strike.jpg","CHANTIER FILMS","Scott Waugh","Arash Amel",80, listOf(
-            Categorie.Aksiyon,Categorie.Macera,Categorie.Komedi
-        ),R.string.hidden_strike_content,16, isViolence = true, isNegativeExample = false,5),
+            Category.Aksiyon,Category.Macera,Category.Komedi
+        ),R.string.hidden_strike_content,16, isViolence = true, isNegativeExample = false),
         Movie(8,R.string.teenage_mutant_ninja_turtles__mutant_mayhem_name,"99","https://www.hdfilmcehennemi.life/uploads/poster/teenage-mutant-ninja-turtles-mutant-mayhem.jpg","Point Grey Pictures","Jeff Rowe","Brendan O'Brien",91, listOf(
-            Categorie.Aksiyon,Categorie.Macera,Categorie.Animasyon
-        ),R.string.teenage_mutant_ninja_turtles__mutant_mayhem_content,7, isViolence = true, isNegativeExample = true,5),
+            Category.Aksiyon,Category.Macera,Category.Animasyon
+        ),R.string.teenage_mutant_ninja_turtles__mutant_mayhem_content,7, isViolence = true, isNegativeExample = true),
         Movie(9,R.string.marry_my_dead_body_name,"130","https://www.hdfilmcehennemi.life/uploads/poster/marry-my-dead-body.jpg","QC Media","Cheng Wei-hao","Cheng Wei-hao",75, listOf(
-            Categorie.Aksiyon,Categorie.Komedi,Categorie.Dram
-        ),R.string.marry_my_dead_body_content,18, isViolence = true, isNegativeExample = true,4),
-        Movie(10,R.string.jesus_revolution_name,"120","https://www.hdfilmcehennemi.life/uploads/poster/jesus-revolution.jpg"," Lions Gate Entertainment","Jon Erwin","Jon Erwin",71, listOf(Categorie.Dram),R.string.jesus_revolution_content,16, isViolence = true, isNegativeExample = true,3),
+            Category.Aksiyon,Category.Komedi,Category.Dram
+        ),R.string.marry_my_dead_body_content,18, isViolence = true, isNegativeExample = true),
+        Movie(10,R.string.jesus_revolution_name,"120","https://www.hdfilmcehennemi.life/uploads/poster/jesus-revolution.jpg"," Lions Gate Entertainment","Jon Erwin","Jon Erwin",71, listOf(Category.Dram),R.string.jesus_revolution_content,16, isViolence = true, isNegativeExample = true),
         Movie(11,R.string.oppenheimer_name,"180","https://www.hdfilmcehennemi.life/uploads/poster/oppenheimer.jpg","Syncopy","Christopher Nolan","Christopher Nolan",94, listOf(
-            Categorie.Dram,Categorie.Biyografi,Categorie.Tarih
-        ),R.string.oppenheimer_content,13, isViolence = true, isNegativeExample = true,4),
+            Category.Dram,Category.Biyografi,Category.Tarih
+        ),R.string.oppenheimer_content,13, isViolence = true, isNegativeExample = true),
     )
 }
