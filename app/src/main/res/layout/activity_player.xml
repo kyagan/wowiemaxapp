@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.player.PlayerActivity">
 
-    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <com.google.android.exoplayer2.ui.StyledPlayerView
         android:id="@+id/videoPlayer"
         android:layout_width="match_parent"
@@ -14,5 +17,17 @@
         app:layout_constraintDimensionRatio="16:9"
         app:resize_mode="fill"
         />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_back_white"/>
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.isVisible
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.kaanyagan.wowiemax.R
@@ -23,7 +24,16 @@ class PlayerActivity : AppCompatActivity() {
         exoPlayer.setMediaItem(MediaItem.fromUri(Uri.parse(getString(R.string.url))))
         exoPlayer.prepare()
         exoPlayer.play()
+
+        binding.ivBack.setOnClickListener {
+            exoPlayer.stop()
+            finish()
+        }
+        binding.videoPlayer.setOnClickListener {
+            binding.ivBack.isVisible = !binding.ivBack.isVisible
+        }
     }
+
 
     override fun onBackPressed() {
         super.onBackPressed()
