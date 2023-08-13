@@ -8,10 +8,10 @@
     tools:context=".ui.search.SearchActivity">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/llParent"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:background="@color/black"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,55 +21,62 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="20dp"
             android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_width="120dp"
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="100dp"
             android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
         android:id="@+id/etSearch"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="65dp"
         android:layout_marginTop="10dp"
-        android:backgroundTint="#FB8E15"
-        android:hint="Search Movie"
-        android:paddingLeft="10dp"
+        android:backgroundTint="@color/logotheme"
+        android:fontFamily="@font/ubuntu_medium"
+        android:hint="@string/search_movie"
         android:paddingBottom="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="15dp"
+        android:textSize="18dp"
+
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/llParent" />
+        app:layout_constraintTop_toBottomOf="@id/llParent"
+        app:layout_constraintRight_toLeftOf="@+id/ivCleanSearch"/>
 
     <ImageView
         android:id="@+id/ivCleanSearch"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_marginLeft="10dp"
         android:src="@drawable/baseline_close_24"
         app:layout_constraintBottom_toBottomOf="@+id/etSearch"
-        app:layout_constraintLeft_toRightOf="@+id/etSearch"
+        app:layout_constraintRight_toLeftOf="@+id/ivCloseKeyboard"
         app:layout_constraintTop_toTopOf="@+id/etSearch" />
 
     <ImageView
         android:id="@+id/ivCloseKeyboard"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:src="@drawable/downarrow"
         app:layout_constraintBottom_toBottomOf="@+id/etSearch"
-        app:layout_constraintLeft_toRightOf="@+id/ivCleanSearch"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/etSearch" />
 
 

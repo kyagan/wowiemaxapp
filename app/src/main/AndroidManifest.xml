@@ -15,6 +15,9 @@
         android:theme="@style/Theme.WowieMax"
         tools:targetApi="31">
         <activity
+            android:name=".ui.empty.EmptyActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.filteredOrSortedMovies.FilteredOrSertedMoviesActivity"
             android:exported="false" />
         <activity

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:background="#1A1A1A"
@@ -16,8 +16,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ivActor"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="#9C27B0" />
 
         <TextView
@@ -25,6 +25,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Character Name"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textAlignment="center"
+            android:fontFamily="@font/ubuntu"
             android:textColor="@color/white"
             android:textSize="10sp"
             android:textStyle="bold" />
@@ -33,7 +37,9 @@
             android:id="@+id/tvActorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:text="Actor Name"
+            android:fontFamily="@font/ubuntu_bold"
             android:textColor="@color/white" />
     </LinearLayout>
 

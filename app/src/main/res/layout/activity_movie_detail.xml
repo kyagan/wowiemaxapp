@@ -21,7 +21,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="#1A1A1A" />
+            android:src="@color/background" />
 
         <ImageView
             android:id="@+id/ivMovie"
@@ -38,7 +38,7 @@
             android:id="@+id/ivReturnBack"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:src="@drawable/baseline_arrow_back_24"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +47,7 @@
             android:id="@+id/ivShare"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:src="@drawable/baseline_share_24"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -71,6 +71,7 @@
             android:text="@{context.getString(movie.name)}"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:fontFamily="@font/ubuntu_bold"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="@id/ivPlay"
             app:layout_constraintRight_toRightOf="@id/ivPlay"
@@ -126,6 +127,7 @@
             android:text="@{`%`+ String.valueOf(movie.rateOfLike)}"
             android:textColor="@color/white"
             android:textStyle="bold"
+            android:fontFamily="@font/ubuntu_bold"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/movieInfoIcons" />
 
@@ -135,6 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu"
             android:text="@string/likedPercantage"
             android:textColor="@color/white"
             app:layout_constraintLeft_toRightOf="@id/tvPercentage"
@@ -154,8 +157,8 @@
 
         <ImageView
             android:id="@+id/ivProducerLogo"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_marginTop="5dp"
             android:src="@drawable/movie_media_player_icon"
             app:layout_constraintLeft_toLeftOf="@id/tvPercentage"
@@ -176,7 +179,6 @@
             android:id="@+id/ivDirector"
             android:layout_width="20dp"
             android:layout_height="20dp"
-
             android:src="@drawable/chair_director_icon"
             app:layout_constraintLeft_toLeftOf="@id/tvPercentage"
             app:layout_constraintTop_toBottomOf="@id/ivProducerLogo"
@@ -218,23 +220,46 @@
 
             />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvActor"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/llActor"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:gravity="center"
+            android:orientation="vertical"
             app:layout_constraintLeft_toLeftOf="@+id/ivDirector"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivDirector"
+            app:layout_constraintTop_toBottomOf="@id/ivDirector">
+
+
+        <ProgressBar
+            android:id="@+id/pbActor"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:padding="40dp"
+            android:visibility="gone"
+            android:background="@color/mainPageBackground"
+            android:indeterminateTint="@color/logotheme"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvActor"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
             tools:listitem="@layout/actor_list_item" />
 
+        </LinearLayout>
+
         <ScrollView
+            android:id="@+id/svActor"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@id/rvActor"
-            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/llActor"
             app:layout_constraintLeft_toLeftOf="@id/tvPercentage"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -243,8 +268,9 @@
                 android:id="@+id/tvContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu"
+                android:layout_marginRight="10dp"
                 android:text="@{context.getString(movie.content)}"
                 android:textColor="@color/white"
                 android:textSize="20sp"

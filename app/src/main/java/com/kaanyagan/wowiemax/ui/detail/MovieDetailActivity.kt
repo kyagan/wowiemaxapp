@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -90,8 +89,14 @@ class MovieDetailActivity : AppCompatActivity() {
                 viewModel.movieActorState.collect {
                     when (it) {
                         MovieActorState.Idle -> {}
-                        MovieActorState.Loading -> {}
+                        MovieActorState.Loading -> {
+                            binding.pbActor.isVisible = true
+                            binding.rvActor.isVisible = false
+                        }
                         is MovieActorState.Result -> {
+                            binding.pbActor.isVisible = false
+                            binding.rvActor.isVisible = true
+
                             binding.rvActor.adapter =
                                 MovieActorAdapter(this@MovieDetailActivity, actors)
                         }

@@ -33,9 +33,10 @@
         android:id="@+id/tvMovieName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
         android:textColor="@color/white"
+        android:fontFamily="@font/ubuntu_bold"
         android:layout_marginLeft="20dp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@id/tvMovieDetails"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -47,7 +48,7 @@
         android:layout_marginLeft="20dp"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text=""
+        android:fontFamily="@font/ubuntu"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/flMain"
         app:layout_constraintStart_toStartOf="parent"

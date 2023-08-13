@@ -16,6 +16,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewpager2.widget.ViewPager2
 import com.kaanyagan.wowiemax.ui.adapter.MovieListAdapter
 import com.kaanyagan.wowiemax.R
+import com.kaanyagan.wowiemax.data.Database
 import com.kaanyagan.wowiemax.data.entity.model.Categorie
 import com.kaanyagan.wowiemax.data.entity.state.CategoryListState
 import com.kaanyagan.wowiemax.data.entity.state.HeaderSlideMovieState
@@ -27,6 +28,7 @@ import com.kaanyagan.wowiemax.ui.adapter.CategoryAdapter
 import com.kaanyagan.wowiemax.ui.adapter.HeaderSlideMovieAdapter
 import com.kaanyagan.wowiemax.ui.adapter.SlideMovieAdapter
 import com.kaanyagan.wowiemax.ui.detail.MovieDetailActivity
+import com.kaanyagan.wowiemax.ui.empty.EmptyActivity
 import com.kaanyagan.wowiemax.ui.filteredOrSortedMovies.FilteredOrSertedMoviesActivity
 import com.kaanyagan.wowiemax.ui.login.LoginActivity
 import com.kaanyagan.wowiemax.ui.search.SearchActivity
@@ -272,10 +274,39 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+        binding.tvMenuItem1.setOnClickListener {
+            startActivity(
+                Intent(this,EmptyActivity::class.java)
+            )
+        }
+        binding.tvMenuItem2.setOnClickListener {
+            startActivity(
+                Intent(this,EmptyActivity::class.java)
+            )
+        }
+        binding.tvMenuItem3.setOnClickListener {
+            startActivity(
+                Intent(this,EmptyActivity::class.java)
+            )
+        }
+        binding.tvMenuItem4.setOnClickListener {
+            startActivity(
+                Intent(this,EmptyActivity::class.java)
+            )
+        }
+
         binding.tvExit.setOnClickListener {
             sharedPreferences = getSharedPreferences(LoginActivity.LOGIN_REMEMBER_ME, Context.MODE_PRIVATE)
             sharedPreferences.edit().putBoolean(LoginActivity.LOGIN_REMEMBER_ME,false).apply()
             val intent = Intent(this@MainActivity,LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRandom.setOnClickListener {
+            val randomMovie = Database.movies.random()
+            val intent = Intent(this@MainActivity, MovieDetailActivity::class.java)
+            intent.putExtra(MOVIE, randomMovie)
             startActivity(intent)
         }
     }

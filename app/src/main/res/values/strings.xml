@@ -68,4 +68,10 @@
     <string name="empty_list">Boş liste</string>
     <string name="likedPercantage">Oranında Beğenildi</string>
     <string name="share_message"> filmini Wowie Max\'ten hemen izle! </string>
+    <string name="random_title">Ne izleyeceğinize\n karar veremediniz mi?</string>
+    <string name="play_something">Bir şeyler oynat</string>
+    <string name="for_you">Sizin İçin</string>
+    <string name="categories">Kategoriler</string>
+    <string name="search_movie">Film Ara</string>
+    <string name="empty_page_title">Üzgünüz, aradığınız sayfayı bulamadık.</string>
 </resources>
