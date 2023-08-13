@@ -30,7 +30,7 @@
             android:background="@drawable/movie_image_background"
             android:clipToOutline="true"
             android:scaleType="centerCrop"
-            android:src="#5E0FAC"
+            android:src="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
 
