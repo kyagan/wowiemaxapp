@@ -33,7 +33,7 @@ import java.util.Calendar
             .setTitle(customTitle)
             .setMessage(customMessage)
             .setIcon(icon)
-            .setPositiveButton("Anladım",null)
+            .setPositiveButton(getString(R.string.i_get_it),null)
             .create()
             dialog.window?.setBackgroundDrawableResource(R.color.background)
             dialog.show()

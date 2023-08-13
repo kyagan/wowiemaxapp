@@ -21,6 +21,7 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="login_signup_title_top">1000s of movies, Wowie Max exclusives and more</string>
     <string name="login_signup_title_bottom">are you ready to watch?\n</string>
+    <string name="i_get_it">I get it</string>
 
     <!-- movie categories -->
     <string name="popular_movies">Popular Movies</string>
@@ -49,7 +50,7 @@
     <string name="categories">Categories</string>
 
     <!-- search activity-->
-    <string name="search_movie">Film Ara</string>
+    <string name="search_movie">Search Movie</string>
 
     <!-- movie detail -->
     <string name="likedPercantage">was liked by</string>

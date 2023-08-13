@@ -21,6 +21,7 @@
     <string name="forgot_password">Şifremi Unuttum</string>
     <string name="login_signup_title_top">1000\'lerce film, Wowie Max\'e\ özel yapımlar ve çok daha fazlasını</string>
     <string name="login_signup_title_bottom">izlemeye hazır mısın?\n</string>
+    <string name="i_get_it">Anladım</string>
 
     <!-- movie categories -->
     <string name="popular_movies">Popüler Filmler</string>

@@ -1,5 +1,6 @@
 package com.kaanyagan.wowiemax.ui.player
 
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.kaanyagan.wowiemax.R
 import com.kaanyagan.wowiemax.databinding.ActivityPlayerBinding
+import com.kaanyagan.wowiemax.ui.main.MainActivity
 
 class PlayerActivity : AppCompatActivity() {
     lateinit var binding: ActivityPlayerBinding
@@ -21,5 +23,10 @@ class PlayerActivity : AppCompatActivity() {
         exoPlayer.setMediaItem(MediaItem.fromUri(Uri.parse(getString(R.string.url))))
         exoPlayer.prepare()
         exoPlayer.play()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        exoPlayer.stop()
     }
 }
