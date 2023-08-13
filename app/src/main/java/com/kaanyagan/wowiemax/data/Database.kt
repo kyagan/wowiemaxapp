@@ -216,7 +216,7 @@ object Database {
         ),R.string.saw_X_content,18, isViolence = false, isNegativeExample = false),
 
         Movie(4,R.string.medusa_deluxe_name,"101","https://www.hdfilmcehennemi.life/uploads/poster/medusa-deluxe.jpg","Wowie","Thomas Hardiman","Thomas Hardiman",65, listOf(
-            Category.Dram,Category.Gizem
+            Category.Dram,Category.Gizem,Category.Korku
         ),R.string.medusa_deluxe_content,13, isViolence = false, isNegativeExample = true),
 
         Movie(5,R.string.scream_VI_name,"122","https://www.hdfilmcehennemi.life/uploads/poster/scream-6-2.jpg","Paramount Pictures","Tyler Gillett","James Vanderbilt",76, listOf(
@@ -249,7 +249,7 @@ object Database {
             listOf(Category.Aksiyon,Category.Gerilim),R.string.john_wick_content,14,true,true),
 
         Movie(13,R.string.Sniper_The_White_Raven_name,"120","https://www.hdfilmcehennemi.life/uploads/poster/sniper-the-white-raven.jpg","Blazer","Marian Bushan","Marian Bushan",85,
-            listOf(Category.Aksiyon,Category.Tarih,Category.Gerilim),R.string.sniper_content,10,true,true),
+            listOf(Category.Aksiyon,Category.Tarih,Category.Korku),R.string.sniper_content,10,true,true),
 
         Movie(14,R.string.Indiana_Jones_name,"135","https://www.hdfilmcehennemi.life/uploads/poster/indiana-jones-and-the-dial-of-destiny.jpg","Blazer","James Mangold","James Mangold",95,
             listOf(Category.Aksiyon,Category.Macera,Category.Fantastik),R.string.indiana_jones_content,10,true,true),

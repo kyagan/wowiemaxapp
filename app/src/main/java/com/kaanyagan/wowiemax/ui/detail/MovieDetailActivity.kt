@@ -53,6 +53,16 @@ class MovieDetailActivity : AppCompatActivity() {
     }
 
     private fun listeners() {
+        binding.ivTextIncrease.setOnClickListener {
+            val tv = binding.tvContent
+            tv.setTextSize(0, tv.textSize + 2.0f);
+        }
+
+        binding.ivTextDecrease.setOnClickListener {
+            val tv = binding.tvContent
+            tv.setTextSize(0, tv.textSize - 2.0f);
+        }
+
         binding.ivReturnBack.setOnClickListener {
             finish()
         }

@@ -24,7 +24,6 @@ class MainViewModel : ViewModel() {
     private val _movieListByPopularityState:MutableStateFlow<MovieListState> = MutableStateFlow(MovieListState.Idle)
     val movieListByPopularityState:StateFlow<MovieListState> = _movieListByPopularityState
 
-
     private val _movieListByStreamerState:MutableStateFlow<MovieListState> = MutableStateFlow(MovieListState.Idle)
     val movieListByStreamerState:StateFlow<MovieListState> = _movieListByStreamerState
 

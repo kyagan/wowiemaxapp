@@ -7,10 +7,10 @@
     android:background="#1A1A1A"
     tools:context=".ui.filteredOrSortedMovies.FilteredOrSortedMoviesActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/llParent"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:background="@color/black"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,21 +19,25 @@
             android:id="@+id/ivBackArrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_back"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_gravity="center"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:layout_width="120dp"
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="100dp"
+            android:layout_gravity="center"
             android:src="@drawable/logo"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_gravity="center"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:id="@+id/tvListTitle"
@@ -41,9 +45,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/llParent"
         android:textAlignment="center"
+        android:fontFamily="@font/ubuntu_bold"
         android:textSize="20sp"
         android:textColor="@color/logo_theme"
-        android:text="Korku Fimleri"
         android:layout_marginTop="10dp"
         />
 
