@@ -75,19 +75,19 @@ object Database {
         ),R.string.the_island_content,16, isViolence = true, isNegativeExample = true,2),
         Movie(3,R.string.saw_X_name,"118","https://www.hdfilmcehennemi.life/uploads/poster/saw-x.jpg","Wowie","Kevin Greutert","Josh Stolberg",70, listOf(
             Categorie.Korku,Categorie.Gerilim,Categorie.Gizem
-        ),R.string.saw_X_content,18, isViolence = true, isNegativeExample = true,3),
+        ),R.string.saw_X_content,18, isViolence = false, isNegativeExample = false,3),
         Movie(4,R.string.medusa_deluxe_name,"101","https://www.hdfilmcehennemi.life/uploads/poster/medusa-deluxe.jpg","Wowie","Thomas Hardiman","Thomas Hardiman",76, listOf(
             Categorie.Dram,Categorie.Gizem
-        ),R.string.medusa_deluxe_content,13, isViolence = true, isNegativeExample = true,4),
+        ),R.string.medusa_deluxe_content,13, isViolence = false, isNegativeExample = true,4),
         Movie(5,R.string.scream_VI_name,"122","https://www.hdfilmcehennemi.life/uploads/poster/scream-6-2.jpg","Paramount Pictures","Tyler Gillett","James Vanderbilt",76, listOf(
             Categorie.Korku,Categorie.Gerilim,Categorie.Gizem
-        ),R.string.scream_VI_content,18, isViolence = true, isNegativeExample = true,2),
+        ),R.string.scream_VI_content,18, isViolence = false, isNegativeExample = false,2),
         Movie(6,R.string.bruce_almighty_name,"101","https://www.hdfilmcehennemi.life/uploads/poster/aman-tanrim-1-izle.jpg","Spyglass Media Group","Tom Shadyac","Steve Koren",88, listOf(
             Categorie.Komedi,Categorie.Fantastik
         ),R.string.bruce_almighty_content,16, isViolence = true, isNegativeExample = true,5),
         Movie(7,R.string.hidden_strike_name,"103","https://www.hdfilmcehennemi.life/uploads/poster/hidden-strike.jpg","CHANTIER FILMS","Scott Waugh","Arash Amel",80, listOf(
             Categorie.Aksiyon,Categorie.Macera,Categorie.Komedi
-        ),R.string.hidden_strike_content,16, isViolence = true, isNegativeExample = true,5),
+        ),R.string.hidden_strike_content,16, isViolence = true, isNegativeExample = false,5),
         Movie(8,R.string.teenage_mutant_ninja_turtles__mutant_mayhem_name,"99","https://www.hdfilmcehennemi.life/uploads/poster/teenage-mutant-ninja-turtles-mutant-mayhem.jpg","Point Grey Pictures","Jeff Rowe","Brendan O'Brien",91, listOf(
             Categorie.Aksiyon,Categorie.Macera,Categorie.Animasyon
         ),R.string.teenage_mutant_ninja_turtles__mutant_mayhem_content,7, isViolence = true, isNegativeExample = true,5),
